@@ -15,7 +15,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+		<maven-release-plugin.version>3.0.0-M6</maven-release-plugin.version>
 		<google.jib.version>2.7.1</google.jib.version>
 		<project.scm.url>git@github.com:alokrep/release-plugin.git</project.scm.url>
 	</properties>
@@ -23,7 +23,7 @@
 	<scm>
 		<connection>scm:git:${project.scm.url}</connection>
 		<developerConnection>scm:git:${project.scm.url}</developerConnection>
-		<url>git@github.com:qcastel/github-actions-maven-release-sample.git</url>
+		<url>git@github.com:alokrep/release-plugin.git</url>
 		<tag>HEAD</tag>
 	</scm>
 
