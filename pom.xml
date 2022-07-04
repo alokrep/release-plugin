@@ -20,6 +20,9 @@
 		<project.scm.url>ssh://git@github.com:alokrep/release-plugin.git</project.scm.url>
 		<repository-name>release-plugin</repository-name>
 		<repository-owner>alokrep</repository-owner>
+		<nexus-repo-id>localSnap</nexus-repo-id>
+		<nexus-repo-name>releasesRepo</nexus-repo-name>
+		<branch-name>${nexus-repo-name}</branch-name>
 	</properties>
 
 	<scm>
@@ -31,8 +34,8 @@
 	<distributionManagement>
         <!-- use the following if you're not using a snapshot version. -->
         <repository>
-            <id>localSnap</id>
-            <name>RepositoryProxyRel</name>
+            <id>${nexus-repo-id}</id>
+            <name>${nexus-repo-name}</name>
             <url>file://${project.build.directory}/mvn-artifact</url>
         </repository>
         <!-- use the following if you ARE using a snapshot version. -->
@@ -140,7 +143,21 @@
         			</execution>
     			</executions>
 			</plugin>
-		</plugins>
+			<!-- Add source to generated jar --> 
+			<plugin>
+    			<groupId>org.apache.maven.plugins</groupId>
+    			<artifactId>maven-source-plugin</artifactId>
+    			<version>3.1.0</version>
+    			<executions>
+        			<execution>
+            			<id>attach-sources</id>
+                		<goals>
+                    		<goal>jar</goal>
+                		</goals>
+        			</execution>
+    			</executions>
+				</plugin>
+			</plugins>
 	</build>
 
 </project>
