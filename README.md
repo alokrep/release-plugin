@@ -1,27 +1,31 @@
-# Maven Release Plugin and Github as repo
+# Protobuf, Maven Release Plugin and Github as repo
 
 This repository is a sample project to show you a usage of [the maven release plugin](https://github.com/alokrep/release-plugin) 
 in a dummy Java application.
 
 
-# Release your maven project using GitHub actions
+# Release your maven project using Maven Release Plugin
 
-We will see how you can use maven release inside a GitHub actions, to release your Java project.
+We will see how you can use maven release plugin, to release your Java project.
 
 
 
-## Sample repository
+## Protobuf Sample Definition
 
-I will use a sample repository to illustrate how this GitHub actions. The repository can be found here: https://github.com/alokrep/release-plugin
+Check the code under proto_definitions in this repo. 
+
+## Protobuf Usage through Maven artifact
+
+Check the code under proto_usages in this repo. 
 
 
 ## Prepare your repository
 
-Before you even begin setting up this github action, you would need to set up your pom.xml first to be ready for maven releases. We recommend you to refer to the maven release plugin documentation for more details: https://maven.apache.org/maven-release/maven-release-plugin/
+Before you begin setting up, you would need to set up your pom.xml first to be ready for maven releases. We recommend you to refer to the maven release plugin documentation for more details: https://maven.apache.org/maven-release/maven-release-plugin/
 
 #### Configure the SCM
 
-See the pom.xml for using Github as SCM(Use SSH): 
+See the pom.xml for using Github as SCM(Use SSH). The compiled binaries will be uploaded into GitHub under a branch called ${nexus-repo-name} : 
 
 ```
 <properties>
@@ -44,6 +48,14 @@ Next, you need to add a Github PAT(Personal Access Token) to /.m2/settings.xml. 
             <password>COPY/PASTE yours</password>
         </server>
 </servers>
+```
+
+Next, install [protobuf compiler](https://grpc.io/docs/protoc-installation/)
+```
+brew install protobuf
+or
+apt install -y protobuf-compiler
+protoc --version  # Ensure compiler version is 3+
 ```
 
 Run in this order. 

@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+<!--
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.4.2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath />  lookup parent from repository
 	</parent>
-	<groupId>com.risksense</groupId>
+-->
+	<packaging>pom</packaging>
+	<groupId>com.alok.protobuf</groupId>
 	<artifactId>alokreleasedemo</artifactId>
 	<version>0.0.4-SNAPSHOT</version>
 	<name>releasedemo</name>
 	<description>Demo of a java project that uses github actions for releasing artifacts and commits</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>16</java.version>
 		<maven-release-plugin.version>3.0.0-M6</maven-release-plugin.version>
 		<google.jib.version>2.7.1</google.jib.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+     	<maven.compiler.target>1.8</maven.compiler.target>
 		<project.scm.url>ssh://git@github.com:alokrep/release-plugin.git</project.scm.url>
 		<repository-name>release-plugin</repository-name>
 		<repository-owner>alokrep</repository-owner>
@@ -49,6 +54,7 @@
     </distributionManagement>
 
 	<dependencies>
+		<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
@@ -64,6 +70,7 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+	-->
 	</dependencies>
 
 	<build>
