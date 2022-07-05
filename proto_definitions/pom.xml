@@ -4,12 +4,12 @@
 	<parent>
 		<groupId>com.alok.protobuf</groupId>
 		<artifactId>alokreleasedemo</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>0.0.5-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<groupId>com.alok.protobuf</groupId>
 	<artifactId>addressbookdefinition</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<name>addressbookproto</name>
 	<description>Protobuf Definition for Address Book</description>
 	<properties>

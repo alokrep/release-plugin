@@ -47,6 +47,7 @@ message Person {
   repeated PhoneNumber phones = 4;
 
   google.protobuf.Timestamp last_updated = 5;
+  string notes = 6;
 }
 
 // Our address book file is just one of these.
