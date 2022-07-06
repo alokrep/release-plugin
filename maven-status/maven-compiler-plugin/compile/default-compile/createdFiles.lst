@@ -1,1 +1,15 @@
-com/example/demo/DemoApplication.class
+com/example/tutorial/protos/Person$PhoneNumber$1.class
+com/example/tutorial/protos/Person.class
+com/example/tutorial/protos/Person$PhoneNumber.class
+com/example/tutorial/protos/AddressBook$Builder.class
+com/example/tutorial/protos/Person$Builder.class
+com/example/tutorial/protos/AddressBook.class
+com/example/tutorial/protos/AddressBookOrBuilder.class
+com/example/tutorial/protos/Person$PhoneNumber$Builder.class
+com/example/tutorial/protos/Person$PhoneNumberOrBuilder.class
+com/example/tutorial/protos/Person$1.class
+com/example/tutorial/protos/AddressBook$1.class
+com/example/tutorial/protos/AddressBookProtos.class
+com/example/tutorial/protos/Person$PhoneType.class
+com/example/tutorial/protos/Person$PhoneType$1.class
+com/example/tutorial/protos/PersonOrBuilder.class

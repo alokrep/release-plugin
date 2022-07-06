@@ -1,1 +1,5 @@
-/Users/alok/source/release-plugin/target/checkout/src/main/java/com/example/demo/DemoApplication.java
+/Users/alok/source/release-plugin/proto_definitions/target/generated-sources/protobuf/java/com/example/tutorial/protos/Person.java
+/Users/alok/source/release-plugin/proto_definitions/target/generated-sources/protobuf/java/com/example/tutorial/protos/AddressBook.java
+/Users/alok/source/release-plugin/proto_definitions/target/generated-sources/protobuf/java/com/example/tutorial/protos/AddressBookOrBuilder.java
+/Users/alok/source/release-plugin/proto_definitions/target/generated-sources/protobuf/java/com/example/tutorial/protos/PersonOrBuilder.java
+/Users/alok/source/release-plugin/proto_definitions/target/generated-sources/protobuf/java/com/example/tutorial/protos/AddressBookProtos.java
