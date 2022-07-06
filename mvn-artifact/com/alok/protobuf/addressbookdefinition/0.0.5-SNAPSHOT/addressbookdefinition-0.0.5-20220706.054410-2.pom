@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.alok.protobuf</groupId>
+		<artifactId>alokreleasedemo</artifactId>
+		<version>0.0.5-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<groupId>com.alok.protobuf</groupId>
+	<artifactId>addressbookdefinition</artifactId>
+	<version>0.0.5-SNAPSHOT</version>
+	<name>addressbookproto</name>
+	<description>Protobuf Definition for Address Book</description>
+	<properties>
+		<protobuf.version>3.19.4</protobuf.version>
+		<protobuf.maven.version>0.6.1</protobuf.maven.version>
+	</properties>
+	<dependencies>
+		<dependency>
+		    <groupId>com.google.protobuf</groupId>
+		    <artifactId>protobuf-java</artifactId>
+		    <version>${protobuf.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.google.protobuf</groupId>
+		    <artifactId>protobuf-java-util</artifactId>
+		    <version>${protobuf.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<!--
+		<extensions>
+	        <extension>
+	            <groupId>kr.motd.maven</groupId>
+	            <artifactId>os-maven-plugin</artifactId>
+	            <version>1.6.0</version>
+	        </extension>
+    	</extensions>
+    	-->
+		<plugins>
+			
+			<plugin>
+		        <groupId>org.xolstice.maven.plugins</groupId>
+		        <artifactId>protobuf-maven-plugin</artifactId>
+		        <version>${protobuf.maven.version}</version>
+		        <extensions>true</extensions>
+		        <executions>
+		            <execution>
+		                <goals>
+		                    <goal>compile</goal>
+		                    <goal>test-compile</goal>
+		                </goals>
+		            </execution>
+		        </executions>
+		        <configuration>
+		            <additionalProtoPathElements>
+		                <additionalProtoPathElement>${project.basedir}/src/main/resources</additionalProtoPathElement>
+		                <additionalProtoPathElement>${project.basedir}/src/main/proto</additionalProtoPathElement>
+		            </additionalProtoPathElements>
+		        </configuration>
+    		</plugin>	
+    		
+		</plugins>
+	</build>
+</project>
